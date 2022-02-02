@@ -6,7 +6,8 @@ function TodoList(props) {
     return (
         <ul>
             {todos.map((item) => {
-                return <li><TodoListItem {...item}/></li>
+                const {id, ...itemsProps} = item;
+                return <li key={id}><TodoListItem {...itemsProps}/></li>
 
             })}
         </ul>
