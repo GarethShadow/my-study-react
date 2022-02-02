@@ -3,7 +3,6 @@ import SearchPanel from "../SearchPanel/SearchPanel";
 import TodoList from "../TodoList/TodoList";
 
 function App() {
-    console.log("hello worls");
 
     return (
         <>
