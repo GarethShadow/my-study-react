@@ -1,0 +1,34 @@
+.status-item__container {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.filter-btn {
+    border: 1px solid grey;
+    background: white;
+    border-radius: 4px 0px 0px 4px;
+    padding: 7px;
+}
+
+.filter-btn:focus {
+    background: #CD4631;
+    border-color: #CD4631;
+    color: white;
+}
+
+.filter-btn:nth-child(2) {
+    border-left: 1px white;
+    border-right: 1px white;
+    border-radius: 0px;
+}
+
+.filter-btn:nth-child(3) {
+    border-radius: 0px 4px 4px 0px;
+}
+
+.filter-btn:hover {
+    background: #CD4631;
+    border-color: #CD4631;
+    color: white;
+}

@@ -1,13 +1,14 @@
 import TodoListItem from "./TodoListItem/TodoListItem";
+import "./StyleTodo.css";
 
 function TodoList(props) {
     const {todos} = props;
 
     return (
-        <ul>
+        <ul className="">
             {todos.map((item) => {
                 const {id, ...itemsProps} = item;
-                return <li key={id}><TodoListItem {...itemsProps}/></li>
+                return <li key={id} className=""><TodoListItem {...itemsProps}/></li>
 
             })}
         </ul>

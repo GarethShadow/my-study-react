@@ -1,6 +1,7 @@
 import Header from "../Header/Header";
 import SearchPanel from "../SearchPanel/SearchPanel";
 import TodoList from "../TodoList/TodoList";
+import "../Header/StyleHeader.css";
 
 function App() {
     const  todoDate = [
@@ -10,11 +11,11 @@ function App() {
     ]
 
     return (
-        <>
+        <div className="full-container">
             <Header />
             <SearchPanel />
             <TodoList todos={todoDate}/>
-        </>);
+        </div>);
 }
 
 export default App;

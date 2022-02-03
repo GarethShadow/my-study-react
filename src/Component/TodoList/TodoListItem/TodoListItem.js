@@ -1,4 +1,4 @@
-import React from "react";
+import "./StyleTodoListItem.css";
 
 const TodoListItem = (props) => {
     const {label, important = false} = props;
