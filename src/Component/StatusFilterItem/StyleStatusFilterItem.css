@@ -16,6 +16,7 @@
     background: #CD4631;
     border-color: #CD4631;
     color: white;
+    outline: none;
 }
 
 .filter-btn:nth-child(2) {
