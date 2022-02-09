@@ -1,3 +1,5 @@
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+
 .list-item__button-block {
     width: max-content;
 }
@@ -8,12 +10,37 @@
     border-radius: 4px;
     width: 35px;
     height: 35px;
+    cursor: pointer;
 }
 
 .btn-left {
     border: 1px solid #CD4631;
 }
 
+.btn-left:hover {
+    background: #CD4631;
+}
+
+.btn-left i {
+    color: #CD4631;
+}
+
+.btn-left:hover i {
+    color: white;
+}
+
 .btn-right {
     border: 1px solid #28a745;
+}
+
+.btn-right i {
+    color: #28a745;
+}
+
+.btn-right:hover {
+    background: #28a745;
+}
+
+.btn-right:hover i {
+    color: white;
 }

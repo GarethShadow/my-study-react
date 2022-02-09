@@ -2,6 +2,7 @@ import Header from "../Header/Header";
 import SearchPanel from "../SearchPanel/SearchPanel";
 import TodoList from "../TodoList/TodoList";
 import "../Header/StyleHeader.css";
+import AddFormItem from "../AddFormItem/AddFormItem";
 
 function App() {
     const  todoDate = [
@@ -15,6 +16,7 @@ function App() {
             <Header />
             <SearchPanel />
             <TodoList todos={todoDate}/>
+            <AddFormItem />
         </div>);
 }
 
