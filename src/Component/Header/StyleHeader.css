@@ -1,0 +1,11 @@
+.full-container {
+    max-width: 750px;
+    margin: 100px auto;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 15px;
+}

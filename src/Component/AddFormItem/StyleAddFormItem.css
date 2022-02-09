@@ -1,0 +1,29 @@
+.add-form__panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add-form__input {
+    border: 1px solid grey;
+    border-radius: 4px;
+    padding: 7px;
+    outline-color: #CD4631;
+    color: #CD4631;
+    width: -webkit-fill-available;
+}
+
+.add-form__button {
+    border: 1px solid grey;
+    background: white;
+    border-radius: 4px 0px 0px 4px;
+    padding: 7px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.add-form__button:hover {
+    background: #CD4631;
+    border-color: #CD4631;
+    color: white;
+}

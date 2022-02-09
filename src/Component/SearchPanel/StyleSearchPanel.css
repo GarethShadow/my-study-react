@@ -1,0 +1,15 @@
+.serch__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.serch__panel {
+    border: 1px solid grey;
+    border-radius: 4px;
+    padding: 7px;
+    outline-color: #CD4631;
+    color: #CD4631;
+    width: -webkit-fill-available;
+}
