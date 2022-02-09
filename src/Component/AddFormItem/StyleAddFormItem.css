@@ -27,3 +27,7 @@
     border-color: #CD4631;
     color: white;
 }
+
+.add-form__button:focus {
+    outline: none;
+}
