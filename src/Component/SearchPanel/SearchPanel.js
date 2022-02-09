@@ -1,5 +1,5 @@
 import "./StyleSearchPanel.css";
-import StatusFilterItem from "../StatusFilterItem/StatusItemFilter";
+import StatusFilterItem from "../StatusFilterItem";
 
 function SearchPanel() {
     return (

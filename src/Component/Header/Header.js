@@ -1,5 +1,5 @@
-import HeaderTitle from "./HeaderTitle/HeaderTitle";
-import HeaderDate from "./HeaderDate/HeaderDate";
+import HeaderTitle from "./HeaderTitle";
+import HeaderDate from "./HeaderDate";
 import "./StyleHeader.css";
 
 function Header() {
