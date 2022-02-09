@@ -1,5 +1,5 @@
 import "./StyleTodoListItem.css";
-import TodoListItemButton from "./TodoListItemButton/TodoListItemButton";
+import TodoListItemButton from "../TodoListItemButton";
 
 const TodoListItem = (props) => {
     const {label, important = false} = props;
