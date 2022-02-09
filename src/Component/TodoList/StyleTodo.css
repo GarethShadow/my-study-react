@@ -1,0 +1,13 @@
+ul {
+    padding: 0px;
+    margin-top: 30px;
+}
+
+.todo-list__list-style {
+    list-style-type: none;
+    border: 1px solid grey;
+    margin-bottom: 7px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+}

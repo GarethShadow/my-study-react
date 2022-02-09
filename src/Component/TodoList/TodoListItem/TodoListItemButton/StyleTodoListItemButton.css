@@ -1,0 +1,19 @@
+.list-item__button-block {
+    width: max-content;
+}
+
+.list-item__btn-style {
+    margin: 3px;
+    background: white;
+    border-radius: 4px;
+    width: 35px;
+    height: 35px;
+}
+
+.btn-left {
+    border: 1px solid #CD4631;
+}
+
+.btn-right {
+    border: 1px solid #28a745;
+}

@@ -9,9 +9,7 @@
     border: 1px solid grey;
     border-radius: 4px;
     padding: 7px;
-}
-
-.serch__panel:-webkit-autofill {
-    -webkit-box-shadow: inset 0 0 0 50px #CD4631!important;
-    box-shadow: inset 0 0 0 50px #CD4631!important;
+    outline-color: #CD4631;
+    color: #CD4631;
+    width: -webkit-fill-available;
 }
