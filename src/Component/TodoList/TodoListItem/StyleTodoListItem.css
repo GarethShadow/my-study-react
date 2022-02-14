@@ -5,6 +5,60 @@
     user-select: none;
 }
 
-.todo-list__item-style {
+.list-item__button-block {
+    width: max-content;
+}
+
+.list-item__btn-style {
+    margin: 3px;
+    background: white;
+    border-radius: 4px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.list-item__btn-style:focus {
+    outline: none;
+}
+
+.btn-left {
+    border: 1px solid #CD4631;
+}
+
+.btn-left:hover {
+    background: #CD4631;
+}
+
+.btn-left i {
+    color: #CD4631;
+}
+
+.btn-left:hover i {
+    color: white;
+}
+
+.btn-right {
+    border: 1px solid #28a745;
+}
+
+.btn-right i {
+    color: #28a745;
+}
+
+.btn-right:hover {
+    background: #28a745;
+}
+
+.btn-right:hover i {
+    color: white;
+}
+
+.todo-list__item-style.done {
+    text-decoration: line-through;
+}
+
+.todo-list__item-style.important {
     font-weight: bold;
+    color:#CD4631;
 }
