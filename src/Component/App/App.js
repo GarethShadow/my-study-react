@@ -15,7 +15,7 @@ function App() {
         <div className="full-container">
             <Header />
             <SearchPanel />
-            <TodoList todos={todoDate}/>
+            <TodoList todos={todoDate} onDeleted={(id) =>{console.log(`deleted: ${id}`)}}/>
             <AddFormItem />
         </div>);
 }

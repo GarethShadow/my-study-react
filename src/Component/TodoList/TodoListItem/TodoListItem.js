@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import "./StyleTodoListItem.css";
+import TodoListItemButton from "../TodoListItemButton";
 
 class TodoListItem extends Component {
 
@@ -25,7 +26,7 @@ class TodoListItem extends Component {
     }
 
     render() {
-        const {label} = this.props;
+        const {label, onDeleted} = this.props;
         const {done, important} = this.state;
 
         let classNames = "todo-list__item-style";
@@ -34,17 +35,14 @@ class TodoListItem extends Component {
             classNames += " done";
         }
 
-        if(important) {
+        if (important) {
             classNames += " important";
         }
 
         return (
             <div className="todo-list-item__block">
                 <span className={classNames} onClick={this.onLabelClick}>{label}</span>
-                <div className="list-item__button-block">
-                    <button className="list-item__btn-style btn-left"><i className="fa fa-trash-o"></i></button>
-                    <button className="list-item__btn-style btn-right" onClick={this.onMarkImportant}><i className="fa fa-exclamation"></i></button>
-                </div>
+                <TodoListItemButton onMarkImportant={this.onMarkImportant} onDeleted={onDeleted} />
             </div>
         );
     }
