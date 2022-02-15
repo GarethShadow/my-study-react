@@ -3,9 +3,11 @@ import Header from "../Header";
 import SearchPanel from "../SearchPanel";
 import TodoList from "../TodoList";
 import "../Header/StyleHeader.css";
-import AddFormItem from "../AddFormItem/AddFormItem";
+import ItemAddForm from "../ItemAddForm/ItemAddForm";
 
 export default class App extends Component {
+    maxId = 4;
+
     state = {
         todoDate: [
             {label: "Drink Coffe", important: false, id: 1},
@@ -27,13 +29,29 @@ export default class App extends Component {
         })
     };
 
+    addItem = (text) => {
+        const newItem = {
+            label: text,
+            important: false,
+            id: this.maxId++
+        };
+
+        this.setState(({todoDate}) => {
+            const newArray = [...todoDate, newItem];
+
+            return {
+                todoDate: newArray
+            }
+        });
+    };
+
     render() {
         return (
             <div className="full-container">
                 <Header/>
                 <SearchPanel/>
                 <TodoList todos={this.state.todoDate} onDeleted={this.deleteItem}/>
-                <AddFormItem/>
+                <ItemAddForm onItemAdded={this.addItem}/>
             </div>
         );
     }
