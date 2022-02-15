@@ -2,11 +2,12 @@ import HeaderTitle from "./HeaderTitle";
 import HeaderDate from "./HeaderDate";
 import "./StyleHeader.css";
 
-function Header() {
+function Header(props) {
+    const {todoCount, doneCount} = props;
     return (
         <div className="header__container">
             <HeaderTitle/>
-            <HeaderDate/>
+            <HeaderDate todoCount={todoCount} doneCount={doneCount}/>
         </div>
     );
 }
