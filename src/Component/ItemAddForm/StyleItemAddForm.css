@@ -20,6 +20,7 @@
     padding: 7px;
     margin-left: 10px;
     cursor: pointer;
+    min-width: max-content;
 }
 
 .add-form__button:hover {
