@@ -45,12 +45,24 @@ export default class App extends Component {
         });
     };
 
+    onToggleImportant = (id) => {
+        console.log(`onToggleImportant ${id}`);
+    };
+
+    onToggleDone = (id) => {
+        console.log(`onToggleDone ${id}`)
+    };
+
     render() {
         return (
             <div className="full-container">
                 <Header/>
                 <SearchPanel/>
-                <TodoList todos={this.state.todoDate} onDeleted={this.deleteItem}/>
+                <TodoList todos={this.state.todoDate}
+                          onDeleted={this.deleteItem}
+                          onToggleImportant={this.onToggleImportant}
+                          onToggleDone={this.onToggleDone}
+                />
                 <ItemAddForm onItemAdded={this.addItem}/>
             </div>
         );
