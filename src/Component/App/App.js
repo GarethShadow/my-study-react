@@ -6,15 +6,24 @@ import "../Header/StyleHeader.css";
 import ItemAddForm from "../ItemAddForm/ItemAddForm";
 
 export default class App extends Component {
-    maxId = 4;
+    maxId = 1;
 
     state = {
         todoDate: [
-            {label: "Drink Coffe", important: false, id: 1},
-            {label: "Build awesome app", important: true, id: 2},
-            {label: "Learn React", important: false, id: 3}
+            this.createTodoItem("Drink Coffe"),
+            this.createTodoItem("Build awesome app"),
+            this.createTodoItem("Learn React"),
         ]
     };
+
+    createTodoItem(label) {
+        return {
+            label,
+            important: false,
+            done: false,
+            id: this.maxId++
+        };
+    }
 
     deleteItem = (id) => {
         this.setState(({todoDate}) => {
@@ -30,11 +39,7 @@ export default class App extends Component {
     };
 
     addItem = (text) => {
-        const newItem = {
-            label: text,
-            important: false,
-            id: this.maxId++
-        };
+        const newItem = this.createTodoItem(text);
 
         this.setState(({todoDate}) => {
             const newArray = [...todoDate, newItem];
@@ -45,20 +50,42 @@ export default class App extends Component {
         });
     };
 
+    toggleProperty(arr, id, propName) {
+        const idx = arr.findIndex((el) => el.id === id);
+
+        const oldItem = arr[idx];
+
+        const newItem = {...oldItem, [propName]: !oldItem[propName]};
+        return [...arr.slice(0, idx), newItem, ...arr.slice(idx + 1)];
+    }
+
     onToggleImportant = (id) => {
-        console.log(`onToggleImportant ${id}`);
+        this.setState(({todoDate}) => {
+            return {
+                todoDate: this.toggleProperty(todoDate, id, "important")
+            };
+        });
     };
 
     onToggleDone = (id) => {
-        console.log(`onToggleDone ${id}`)
+        this.setState(({todoDate}) => {
+            return {
+                todoDate: this.toggleProperty(todoDate, id, "done")
+            };
+        });
     };
 
     render() {
+        const {todoDate} = this.state;
+        const doneCount = todoDate.filter((el) => el.done).length;
+
+        const todoCount= todoDate.length - doneCount;
+
         return (
             <div className="full-container">
-                <Header/>
+                <Header todoCount={todoCount} doneCount={doneCount}/>
                 <SearchPanel/>
-                <TodoList todos={this.state.todoDate}
+                <TodoList todos={todoDate}
                           onDeleted={this.deleteItem}
                           onToggleImportant={this.onToggleImportant}
                           onToggleDone={this.onToggleDone}
