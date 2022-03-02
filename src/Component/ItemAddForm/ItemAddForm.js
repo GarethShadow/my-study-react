@@ -3,14 +3,40 @@ import "./StyleItemAddForm.css";
 
 export default class ItemAddForm extends Component {
 
+    state = {
+        label: ""
+    }
+
+    onLabelChange = (e) => {
+        this.setState({
+            label : e.target.value
+        });
+    };
+
+    onSubmit = (e) => {
+        e.preventDefault();
+      this.props.onItemAdded(this.state.label);
+    };
+
     render() {
-        const {onItemAdded} = this.props;
         return (
-            <div className="add-form__panel">
-                <input className="add-form__input" placeholder="search"/>
-                <button className="add-form__button" onClick={() => onItemAdded('Hello world')}>Add Item
+            <form
+                className="add-form__panel"
+                onSubmit={this.onSubmit}
+            >
+                <input
+                    className="add-form__input"
+                    placeholder="search"
+                    type="text"
+                    onChange={this.onLabelChange}
+                    placeholder="What need tobe done"
+                />
+                <button
+                    className="add-form__button"
+                >
+                    Add Item
                 </button>
-            </div>
+            </form>
         );
     }
 
