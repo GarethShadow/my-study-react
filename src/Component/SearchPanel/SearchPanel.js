@@ -1,13 +1,25 @@
+import React, {Component} from "react";
 import "./StyleSearchPanel.css";
 import StatusFilterItem from "../StatusFilterItem";
 
-function SearchPanel() {
-    return (
-        <div className="serch__container">
-            <input className="serch__panel" placeholder="search"/>
-            <StatusFilterItem/>
-        </div>
-        );
-}
+export default class SearchPanel extends Component{
 
-export default SearchPanel;
+    state = {
+        term: ""
+    };
+
+    onSearchChange = (e) => {
+        const term = e.target.value;
+        this.setState({term});
+        this.props.onSearchChange(term);
+    };
+
+    render() {
+        return (
+            <div className="serch__container">
+                <input className="serch__panel" placeholder="type to search" value={this.state.term} onChange={this.onSearchChange}/>
+                <StatusFilterItem/>
+            </div>
+        );
+    }
+}
