@@ -9,3 +9,10 @@
     align-items: baseline;
     margin-bottom: 15px;
 }
+
+.serch__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}

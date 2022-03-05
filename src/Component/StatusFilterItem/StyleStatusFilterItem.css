@@ -30,6 +30,12 @@
 }
 
 .filter-btn:hover {
+    background: #cd6d5e;
+    border-color: #cd6d5e;
+    color: white;
+}
+
+.filter-btn-cactive {
     background: #CD4631;
     border-color: #CD4631;
     color: white;
