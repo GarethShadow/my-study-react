@@ -1,1 +1,1 @@
-# my-study-react
+# here is the description of the project
